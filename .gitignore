@@ -8,5 +8,5 @@ _site/
 # Jekyll / Ruby build artifacts
 .jekyll-cache/
 .sass-cache/
-.bundle/
-vendor/
+/.bundle/
+/vendor/
