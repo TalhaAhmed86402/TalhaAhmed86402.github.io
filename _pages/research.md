@@ -36,7 +36,7 @@ I am currently an M.S. student at [DASH Lab](https://dash-lab.github.io/), Sungk
 </div>
 
 <div style="text-align:center; margin: 6px 0 8px 0;">
-  <img src="/files/test_3.png" alt="Research Word Cloud" style="max-width:85%; height:auto;">
+  <img src="/files/research_wordcloud_2026.png" alt="Research word cloud: deepfake detection, generative models, AI safety" style="max-width:85%; height:auto;">
 </div>
 
 Research Experience
