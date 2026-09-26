@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Custom components used across _pages (cards, news, grid, lightbox)
+   ========================================================================== */
+
+$accent-color: $link-color;
+
+/* Two-column grid (home + research pages) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25em 2em;
+  margin: 1.5em 0;
+
+  @include breakpoint($medium) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  section {
+    background: $code-background-color;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    padding: 1em 1.25em;
+  }
+
+  h2, h3 {
+    margin-top: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  ul { margin-bottom: 0; padding-left: 1.1em; }
+  li { font-size: 0.9em; margin-bottom: 0.35em; }
+  p  { font-size: 0.9em; margin-bottom: 0; }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 1.1em;
+  margin: 0 0 0.75em 0;
+
+  .bar {
+    display: inline-block;
+    width: 4px;
+    height: 1.1em;
+    border-radius: 2px;
+    background: $accent-color;
+  }
+}
+
+/* Cards: research / publications / teaching / projects */
+.publication-block {
+  border: 1px solid $border-color;
+  border-left: 4px solid $accent-color;
+  border-radius: 8px;
+  padding: 1em 1.25em;
+  margin: 0 0 1.5em 0;
+  background: $background-color;
+  transition: box-shadow 0.2s ease;
+
+  &:hover { box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07); }
+
+  p, li { font-size: 0.9em; }
+  ul { margin-bottom: 0.5em; }
+}
+
+.publication-title {
+  font-weight: bold;
+  font-size: 1.05em;
+  line-height: 1.35;
+  color: $darker-gray;
+}
+
+.publication-block h3.conference-name {
+  font-size: 0.85em;
+  font-weight: normal;
+  font-style: italic;
+  color: $gray;
+  margin: 0.35em 0 0.25em 0;
+  padding: 0;
+  border: none;
+}
+
+.author-name {
+  font-size: 0.85em !important;
+  margin-bottom: 0.6em;
+}
+
+.publication-block .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: 0.5em;
+
+  a {
+    display: inline-block;
+    font-size: 0.75em;
+    padding: 0.25em 0.8em;
+    border: 1px solid $accent-color;
+    border-radius: 999px;
+    color: $accent-color;
+    text-decoration: none;
+
+    &:hover { background: $accent-color; color: #fff; }
+  }
+}
+
+/* News */
+.news-container { margin: 1em 0 1.5em 0; }
+
+.news-item {
+  display: grid;
+  grid-template-columns: 5.5em 1fr;
+  column-gap: 1em;
+  padding: 0.6em 0;
+  border-bottom: 1px dashed $border-color;
+
+  &:last-child { border-bottom: none; }
+
+  .date {
+    font-family: $monospace;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: $accent-color;
+    padding-top: 0.15em;
+  }
+
+  p { font-size: 0.9em; margin: 0; }
+
+  .news-image {
+    grid-column: 2;
+    max-width: 320px;
+    width: 100%;
+    margin-top: 0.6em;
+    border-radius: 6px;
+    cursor: zoom-in;
+  }
+}
+
+/* Click-to-expand image lightbox */
+.image-box {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  cursor: zoom-out;
+
+  .full-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 92vw;
+    max-height: 88vh;
+    border-radius: 6px;
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 24px;
+    color: #fff;
+    font-size: 2.5em;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
+/* Scrollable boxes (News, Awards on the home page) */
+.scroll-box {
+  max-height: 24em;
+  overflow-y: auto;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 0.25em 1em;
+  background: $background-color;
+  scrollbar-width: thin;
+  scrollbar-color: $light-gray transparent;
+
+  &::-webkit-scrollbar { width: 8px; }
+  &::-webkit-scrollbar-thumb { background: $light-gray; border-radius: 4px; }
+}
+
+.awards-box {
+  max-height: 12em;
+  padding: 0.5em 1em;
+
+  ul { margin: 0.25em 0; }
+  li { font-size: 0.9em; margin-bottom: 0.35em; }
+}

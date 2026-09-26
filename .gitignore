@@ -1,0 +1,12 @@
+_site/
+
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Jekyll / Ruby build artifacts
+.jekyll-cache/
+.sass-cache/
+.bundle/
+vendor/
