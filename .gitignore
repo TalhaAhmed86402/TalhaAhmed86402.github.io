@@ -10,3 +10,6 @@ _site/
 .sass-cache/
 /.bundle/
 /vendor/
+
+# CV LaTeX sources (keep private; only files/CV.pdf is published)
+files/CV/
